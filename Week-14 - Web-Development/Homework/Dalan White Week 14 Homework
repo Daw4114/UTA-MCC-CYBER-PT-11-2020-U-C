@@ -18,36 +18,57 @@ Before you work through the questions below, please create a new file and record
 Answer the following questions about the HTTP request and response process.
 
 1. What type of architecture does the HTTP request and response process occur in?
+ Client-Server Architecture, which takes place in OSi 7
 
 2. What are the different parts of an HTTP request? 
+The request Line: is the very first line in an HTTP request. 
+It forms the HTTP method used, The request URL and the HTTP protocol Ver.
+The Request Header: the HTTP header that can be used in an HTTP request to provide info about the request
+the Request body: is data sent by the client to your API. A response body is the data your AP sends to the client
 
 3. Which part of an HTTP request is optional?
+The request body is optional
 
 4. What are the three parts of an HTTP response?
+Status Line: describing the message
+Header: containing attributes
+Body (Optional) - containing data
 
 5. Which number class of status codes represents errors?
+400 codes indicate client errors 
+500 codes indicate server errors
 
 6. What are the two most common request methods that a security professional will encounter?
+GET & POST 
+GET: method requests ask for data from a server to retrieve data
+POST: method requests send data to a specified resource
 
 7. Which type of HTTP request method is used for sending data?
+POST: is used to send data to a server to create/update a resource
 
 8. Which part of an HTTP request contains the data being sent to the server?
+The Request Body: POST request sends data to the server
 
-9. In which part of an HTTP response does the browser receive the web code to generate and style a web page?
+9. In which part of an HTTP response does the browser receive the web code to generate and style a web page? The Response Body: Data received along with the response
 
 #### Using curl
 
 Answer the following questions about `curl`:
 
 10. What are the advantages of using `curl` over the browser?
+curl is a free command line tool with many advantages i.e authentication, HTTP post, SSL connections etc
 
 11. Which `curl` option is used to change the request method?
+The options can be using the -x or --request command-line options
 
 12. Which `curl` option is used to set request headers?
+-H, --header
 
 13. Which `curl` option is used to view the response header?
+-i --include
 
 14. Which request method might an attacker use to figure out which HTTP requests an HTTP server will accept?
+GET request because attackers could request data from a server to figure out which HTTP requests that an HTTP server will accept
 
 #### Sessions and Cookies
 
@@ -62,6 +83,8 @@ Answer the following questions about sessions and cookies:
     Content-type: text/html
     Set-Cookie: cart=Bob
     ```
+    
+    The set-cookies sends the cookie to the client which the cookie sent in cart=bob
 
 16. Which request header will continue the client's session?
 
@@ -70,6 +93,7 @@ Answer the following questions about sessions and cookies:
     Host: www.example.org
     Cookie: cart=Bob
     ```
+the cookie will continue the client's sessions
 
 #### Example HTTP Requests and Responses
 
@@ -91,12 +115,17 @@ username=Barbara&password=password
 ```
 
 17. What is the request method?
+POST
 
 18. Which header expresses the client's preference for an encrypted response?
+Upgrade-Insecure-Requests:1
 
 19. Does the request have a user session associated with it?
+No, the session is not restablished yet
 
 20. What kind of data is being sent from this request body?
+login credential was sent
+
 
 **HTTP Response**
 
@@ -118,41 +147,57 @@ X-XSS-Protection: 1; mode=block
 ```
 
 21. What is the response status code?
+200
 
 22. What web server is handling this HTTP response?
+Apache webserver
 
 23. Does this response have a user session associated to it?
+Yes, Set-Cookie: SessionID=5
 
 24. What kind of content is likely to be in the [page content] response body?
+The code to the website, as seen in Content-Type: text/html; charset=UTF-8
 
 25. If your class covered security headers, what security request headers have been included?
-
+HTTP Strict-Transport-Security(HSTS) strict-Transport-security: max-age=31536000; includeSubDomains
+X-Content-Type: NoSniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
 #### Monoliths and Microservices
 
 Answer the following questions about monoliths and microservices:
 
 26. What are the individual components of microservices called?
+There are 8 core components of microservices:
+1. Clients 2. Identity Providers 3. API gateway 4. Messaging Formats 5. Databases 6. Static Content 7. Management 8. Service Discovery
 
 27. What is a service that writes to a database and communicates to other services?
+API: Application Programming Interface
 
 28. What type of underlying technology allows for microservices to become scalable and have redundancy?
+Cointainers allow microservices to be scalable & redundant, along with Load Balancer
 
 #### Deploying and Testing a Container Set
 
 Answer the following questions about multi-container deployment:
 
 29. What tool can be used to deploy multiple containers at once?
+Docker Compose is a tool to deploy mutiple containers
+docker-compose up to bring up the multiple containers
+docker-compose down to bring down the mutliple containers
 
 30. What kind of file format is required for us to deploy a container set?
-
+YAML file
 #### Databases
 
 31. Which type of SQL query would we use to see all of the information within a table called `customers`?
+SELECT statements
 
 32. Which type of SQL query would we use to enter new data into a table? (You don't need a full query, just the first part of the statement.)
+INSERT INTO
 
 33. Why would we never run `DELETE FROM <table-name>;` by itself?
-
+it deletes the entire table since it does not have the where clause
 ---
 
 ### Bonus Challenge Overview: The Cookie Jar
