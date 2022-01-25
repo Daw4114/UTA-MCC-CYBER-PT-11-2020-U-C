@@ -16,27 +16,27 @@ Use the graphic below to answer the following questions:
 
 1. Which part of the URL can be manipulated by an attacker to exploit a vulnerable back-end database system? 
 
-Answer:
+Answer: Parameters
 
 2. Which part of the URL can be manipulated by an attacker to cause a vulnerable web server to dump the `/etc/passwd` file? Also, name the attack used to exploit this vulnerability.
 
-Answer:
+Answer: path
    
 3. Name three threat agents that can pose a risk to your organization.
 
-Answer:
+Answer: Nationstates, Hacktivist & Organized crime
 
 4. What kinds of sources can act as an attack vector for injection attacks?
 
-Answer:
+Answer: Cross site scripting, Code injection, SQL injection, Email Header
 
 5. Injection attacks exploit which part of the CIA triad?
 
-Answer:
+Answer: Confidentiality
 
 6. Which two mitigation methods can be used to thwart injection attacks?
 
-____
+Scrub all input data, Application code review, & Consistent Patching
 
 #### Web Server Infrastructure
 
@@ -54,23 +54,23 @@ Use the graphic below to answer the following questions:
    
 1. What stage is the most inner part of the web architecture where data such as, customer names, addresses, account numbers, and credit card info, is stored?
 
-Answer:
+Answer: Database
 
 2. Which stage includes online forms, word processors, shopping carts, video and photo editing, spreadsheets, file scanning, file conversion, and email programs such as Gmail, Yahoo and AOL.
 
-Answer:
+Answer: Web Application
 
 3. What stage is the component that stores files (e.g. HTML documents, images, CSS stylesheets, and JavaScript files) that's connected to the Internet and provides support for physical data interactions between other devices connected to the web?
 
-Answer:
+Answer: Web Server
 
 4. What stage is where the end user interacts with the World Wide Web through the use of a web browser?
 
-Answer:
+Answer: Client
 
 5. Which stage is designed to prevent unauthorized access to and from protected web server resources?
 
-Answer:
+Answer: Firewall
 
 ----
 
@@ -81,29 +81,29 @@ In today’s globally connected cyber community, network and OS level attacks ar
 
 1. What is the process called that cleans and scrubs user input in order to prevent it from exploiting security holes by proactively modifying user input.
 
-Answer:
+Answer: Input Sanitation
 
 2. Name the process that tests user and application-supplied input. The process is designed to prevent malformed data from entering a data information system by verifying user input meets a specific set of criteria (i.e. a string that does not contain standalone single quotation marks).
 
-Answer:
+Answer: Input Vcalidation
 
 3. **Secure SDLC** is the process of ensuring security is built into web applications throughout the entire software development life cycle. Name three reasons why organization might fail at producing secure web applications.
 
-Answer:
+Answer: High implement costs, Insufficient Standardization & insuff. support from Management
 
 4. How might an attacker exploit the `robots.txt` file on a web server?
 
-Answer:
+Answer: the txt file tell search engines which directories can/cant be read reveales where they can contain important sensitive data and where it maybe stores
 
 5. What steps can an organization take to obscure or obfuscate their contact information on domain registry web sites?
 
-Answer:
+Answer: Proxy service provived by Private registration service acting on behalf on the registrant
    
 6. True or False: As a network defender, `Client-Side` validation is preferred over `Server-Side` validation because it's easier to defend against attacks.
 
    - Explain why you chose the answer that you did.
 
-Answer:
+Answer: False, Client side attacks can be difficult to mitigate they occur behind the firewall on the local corporate network
 
 ____
 
@@ -115,15 +115,15 @@ WAFs are typically present on web sites that use strict transport security mecha
 
 1. Which layer of the OSI model do WAFs operate at?
 
-Answer:
+Answer: OSI Layer 7 Applications
 
 2. A WAF helps protect web applications by filtering and monitoring what?
 
-Answer:
+Answer: Allow list, Deny lists & hybirds
 
 3. True or False: A WAF based on the negative security model (Blacklisting) protects against known attacks, and a WAF based on the positive security model (Whitelisting) allows pre-approved traffic to pass.
 
-Answer:
+Answer: true
 ____
 
 #### Authentication and Access Controls
@@ -136,29 +136,29 @@ Security enhancements designed to require users to present two or more pieces of
 
 1. Define all four factors of multifactor authentication and give examples of each:
 
-   - Factor 1:
+   - Factor 1: Something you know. Ex: passwords/pins
 
    
-   - Factor 2:
+   - Factor 2:something you have. Ex: certs,emails/phone calls
    
    
-   - Factor 3:
+   - Factor 3: Something you are. Ex: Fingerprints, facial recognition
 
    
-   - Factor 4:
+   - Factor 4: Location EX: geolocation
 
    
 2. True or False: A password and pin is an example of 2-factor authentication.
 
-Answer:
+Answer: false
    
 3. True or False: A password and `google authenticator app` is an example of 2-factor authentication.
 
-Answer:
+Answer: true
    
 4. What is a constrained user interface? 
 
-Answer:
+Answer: a interface design that lmits the possible actions a user can do with a control. and a constrained UI limits the users environment within the system and access to objects
 
 ----
 ____
@@ -204,8 +204,9 @@ Your first mission is to break the authentication scheme. There are a number of 
 - **Hint #2**: Find the hidden JavaScript.
 
 - **Hint #3**: You can appened `source?source=true` to the URL to read the source code. 
+![Screenshot (111)](https://user-images.githubusercontent.com/89820505/150655712-daa337bf-29a9-4677-a655-de5409519ee7.png)
 
-Please include a screenshot here of the hidden JavaScript:
+Please include a screenshot here of the hidden JavaScript:!
 
 After completing the first challenge, you will be provided with an option to continue to the next challenge.
 
@@ -217,7 +218,8 @@ Next, steal all of the credit card numbers from the database.
 
 - **Hint #2**: Break your way into the conversation and inject your own ideas.
 
-Please include a screenshot here of all the credit card numbers from the database. 
+Please include a screenshot here of all the credit card numbers from the database. ![ScreenShot (114)](https://user-images.githubusercontent.com/89820505/150909739-47d9fd3b-9188-4770-8bee-5c6f3134dbe9.png)
+
 
 After completing the second challenge, you will be provided with an option to continue to the next challenge.
 
@@ -296,6 +298,8 @@ Your final act is to deface the website using command injection. Follow the walk
     * **and** echo `You've been hacked by...` followed by your name, to the `webgoat_challenge_guest.jsp` file.
     
 Please include a screenshot of the defaced website. 
+![Screenshot (112)](https://user-images.githubusercontent.com/89820505/150909691-00fe4655-26df-48c9-b4c9-3fcf6c92b989.png)
+![Screenshot (113)](https://user-images.githubusercontent.com/89820505/150909704-d8d9b3fa-3810-4fbf-b635-ab92b19cb5bd.png)
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
