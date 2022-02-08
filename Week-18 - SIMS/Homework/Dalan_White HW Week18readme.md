@@ -67,7 +67,13 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 4. Answer the following questions:
 
     - Based on the report created, what is the approximate date and time of the attack?
+    - On 02-23-2020 14:30. An Attack took place where the download megabit speed had drastically decreased from 109.16 MPS to 7.87 MPS
     - How long did it take your systems to recover?
+    Lasted till 02-23-2020 23:30 where speeds returned to 122.91 MPS
+    - [Screenshot (137)](https://user-images.githubusercontent.com/89820505/152834128-3a99243a-bf51-4cfa-8e01-a8c59c8c4ecb.png)
+    
+![Screenshot (138)](https://user-images.githubusercontent.com/89820505/152834211-1721059e-ec1e-4847-9410-4f7bfb30554b.png)
+
 
 Submit a screen shot of your report and the answer to the questions above.
  
@@ -87,6 +93,9 @@ Submit a screen shot of your report and the answer to the questions above.
    - The field that identifies the level of vulnerabilities is `severity`.
       
 3. Build an alert that monitors every day to see if this server has any critical vulnerabilities. If a vulnerability exists, have an alert emailed to `soc@vandalay.com`.
+![Screenshot (140)](https://user-images.githubusercontent.com/89820505/152929691-d15f2799-cec2-4fb4-b370-0337e9722b4f.png)
+
+![Screenshot (141)](https://user-images.githubusercontent.com/89820505/152931062-3c2c6dc3-408a-47db-88fd-12c57a500e93.png)
 
 Submit a screenshot of your report and a screenshot of proof that the alert has been created.
 
@@ -107,9 +116,16 @@ Submit a screenshot of your report and a screenshot of proof that the alert has 
      - Note the attack lasted several hours.
 
       
-3. Determine a baseline of normal activity and a threshold that would alert if a brute force attack is occurring.
+3. Determine a baseline of normal activity and a threshold that would alert if a brute force attack is occurring.!
+Looking at the 'name' field for "An account failed to log on" I was able to look & determine the time of attack.
+the brute force attack occured from 9:00 until 14:00 on 02/21/2020 for a total of 5 hours
+Standard baseline is 5 to 35 logs an hour. The threhold shouldbe set at 40 or more login attempts in an hour and the alert will be sent to SOC@vandalay.com when triggered
+[Screenshot (142)](https://user-images.githubusercontent.com/89820505/152935429-2ca8f9c3-53ad-47da-b636-c28bc50ea314.png)
 
-4. Design an alert to check the threshold every hour and email the SOC team at SOC@vandalay.com if triggered. 
+
+4. Design an alert to check the threshold every hour and email the SOC team at SOC@vandalay.com if triggered. ![Screenshot (143)](https://user-images.githubusercontent.com/89820505/152936030-67831615-478f-4eb1-ad71-46b35b83cf02.png)
+
+
 
 Submit the answers to the questions about the brute force timing, baseline and threshold. Additionally, provide a screenshot as proof that the alert has been created.
  
