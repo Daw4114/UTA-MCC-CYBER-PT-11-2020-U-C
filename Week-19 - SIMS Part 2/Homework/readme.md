@@ -47,6 +47,7 @@ The best thing to do is to change the password for User_J manually and to use th
 #### Question 2
 - VSI has insider information that JobeCorp attempted to target users by sending "Bad Logins" to lock out every user.
 - What sort of mitigation could you use to protect against this?
+-
  Easiest solution would be to set up a group policy for the company.
  That group policy would automatically unlock users accounts after a set amount of time. As soon as the company finds out about this insider attack, the employees should also be notified immediately to be more vigilant & careful about who they accept information from
 
@@ -57,6 +58,7 @@ The best thing to do is to change the password for User_J manually and to use th
 - Provide a "plain english" description of the rule.
   - For example: "Block all incoming HTTP traffic where the source IP comes from the city of Los Angeles."
 - Provide a screen shot of the geographic map that justifies why you created this rule. 
+
 Most of the incoming attacks were coming from Ukraine. Therefore we should set up a firewall rule to block HTTP traffic from Ukraine. Firewall rule should describe "Block all incoming HTTP traffic where the source IP comes from the country of Ukraine"
 ![Screenshot (152)](https://user-images.githubusercontent.com/89820505/154905258-a2d9b3ae-2de5-4227-a27f-521e82dff473.png)
 ![Screenshot (153)](https://user-images.githubusercontent.com/89820505/154905278-3df6c40d-9f9d-4833-9dec-cbcd9efa65ee.png)
