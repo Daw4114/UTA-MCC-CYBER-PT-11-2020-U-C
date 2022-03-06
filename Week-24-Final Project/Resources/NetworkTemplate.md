@@ -6,15 +6,30 @@ _TODO_ Complete this report as you complete the Network Activity on Day 3 of cla
 You must inspect your traffic capture to answer the following questions:
 
 1. What is the domain name of the users' custom site?
+ Domain name: Frank-n-Ted-DC. frank-n-ted.com
+ wireshark filter: ip.src==10.6.12.0/24
 2. What is the IP address of the Domain Controller (DC) of the AD network?
-3. What is the name of the malware downloaded to the 10.6.12.203 machine?
-   - Once you have found the file, export it to your Kali machine's desktop.
+ -IP Address: 10.6.12.12 (Frank-n-Ted-DC.frank-n-ted.com)
+ -Wireshark filter: ip.src==10.6.12.0/24
+ ![Screenshot (274)](https://user-images.githubusercontent.com/89820505/156908635-a089cc43-cc06-4636-a1f7-7edc13c12ccb.png)
+ 
+3. What is the name of the malware downloaded to the 10.6.12.203 machine? Once you have found the file, export it to your Kali machine's desktop.
+ -Malware filename: june11.dll
+ -Wireshark Filter: ip.addr == 10.6.12.0/24 
+ ![Screenshot (275)](https://user-images.githubusercontent.com/89820505/156908647-a1e63567-126e-4581-8895-a8455bb54e4d.png)
+ 
+   
 4. Upload the file to [VirusTotal.com](https://www.virustotal.com/gui/). 
+Exporting file to kali
+ -open file tab | Export objects | select HTTP | Filter "*.dll" 
+ save june.dll | Upload to virustotal.com
+ 
 5. What kind of malware is this classified as?
+ -trojan
 
 ---
 
-## Vulnerable Windows Machine
+## Vulnerable Windows Machine N/A
 
 1. Find the following information about the infected Windows machine:
     - Host name
@@ -27,7 +42,7 @@ You must inspect your traffic capture to answer the following questions:
 
 ---
 
-## Illegal Downloads
+## Illegal Downloads N/A
 
 1. Find the following information about the machine with IP address `10.0.0.201`:
     - MAC address
